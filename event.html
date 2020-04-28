@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Understanding HTML events
+        </title>
+    </head>
+    <body>
+        <!--Prints date & time on element w/ id, getDate-->
+        <button onclick="document.getElementById('getDate').innerHTML=Date()">What is the date?</button>
+        <p id="getDate"></p>
+        
+        <!--Prints date & time in the button itself-->
+        <button onclick="this.innerHTML=Date()">What is the date?</button><br>
+        
+        <!--Prints date & time using customised function-->
+        <script>
+            function printDate()
+            {
+                document.getElementById('getAnotherDate').innerHTML=Date();
+            }
+        </script>
+        <button onclick="printDate()">What is the date?</button>
+        <p id="getAnotherDate"></p>
+        
+        <!--Creating an HTML alert when text is Clicked-->
+        <h3 onclick="alert('Hello')">Click this to say "Hello"</h3>
+
+        <!--Creating an HTML alert when mouse goes over text-->
+        <h3 style="background:#ccc;" onmouseover="alert('Hello')">Move mouse over this to say "Hello"</h3>
+
+        <!--Clicking the text will log text in console-->
+        <h3 onclick="console.log('Hello')">Click this to log "Hello" in console</h3>
+</body>
+</html>

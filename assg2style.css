@@ -1,0 +1,15 @@
+/** This is a comment that the browser will ignore,
+* Put your CSS code into this file
+*/
+
+/*Changing font-size*/
+h1{font-family: 'Pacifico';}
+/*Changing text alignment*/
+.align{text-align: center;}
+/*Changes border, padding, background color & text color*/
+#back{
+    background: orange;
+    border: 3px black solid;
+    padding: 5%;
+    color:white;
+}

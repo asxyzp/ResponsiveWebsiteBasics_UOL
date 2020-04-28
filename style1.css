@@ -1,0 +1,21 @@
+@media (min-width:320px)
+{
+    body{
+        background: blue;
+        color:white;
+    }
+}
+@media (min-width:500px)
+{
+    body{
+        background: red;
+        color:white;
+    }
+}
+@media (min-width:1000px)
+{
+    body{
+        background: green;
+        color:white;
+    }
+}
