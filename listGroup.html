@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="icon" href=""/>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            .topic-title{
+                text-align:center;
+                text-decoration: underline;
+            }
+            .list-group{
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:2%;
+                width:80%;
+            }
+            .badge{
+                color:white;
+                background:rgb(20,20,20);
+                margin-right:10px;
+            }
+            a[class="list-group-item"]:hover{
+                background:#ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="topic-title">list-group w/ list-group-item :</h2>
+        <ul class="list-group">
+            <li class="list-group-item">List item 1</li>
+            <li class="list-group-item">List item 2</li>
+            <li class="list-group-item">List item 3</li>
+            <li class="list-group-item">List item 4</li>
+        </ul>
+
+        <h2 class="topic-title">list-group-item w/ badges :</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><span class="badge">1</span>List item 1</li>
+            <li class="list-group-item"><span class="badge">2</span>List item 2</li>
+            <li class="list-group-item"><span class="badge">3</span>List item 3</li>
+            <li class="list-group-item"><span class="badge">4</span>List item 4</li>
+        </ul>
+
+        <h2 class="topic-title">list-group w/ linked items :</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item">List item 1</a>
+            <a href="#" class="list-group-item">List item 2</a>
+            <a href="#" class="list-group-item">List item 3</a>
+            <a href="#" class="list-group-item">List item 4</a>
+        </div>
+
+        <h2 class="topic-title">Click list-group-item to change it's state to active :</h2>
+        <div class="list-group">
+            <div id="li1" class="list-group-item">List item 1</div>
+            <div id="li2" class="list-group-item">List item 2</div>
+            <div id="li3" class="list-group-item">List item 3</div>
+            <div id="li4" class="list-group-item">List item 4</div>
+        </div>
+
+        <h2 class="topic-title">list-group w/ no flush :</h2>
+        <div class="list-group list-group-flush">
+            <div id="li5" class="list-group-item">List item 1</div>
+            <div id="li6" class="list-group-item">List item 2</div>
+            <div id="li7" class="list-group-item">List item 3</div>
+            <div id="li8" class="list-group-item">List item 4</div>
+        </div>
+
+        <h2 class="topic-title">list-group w/ contextual classes :</h2>
+        <div class="list-group list-group-flush">
+            <div id="li5" class="list-group-item list-group-item-success">List item 1</div>
+            <div id="li6" class="list-group-item list-group-item-info">List item 2</div>
+            <div id="li7" class="list-group-item list-group-item-warning">List item 3</div>
+            <div id="li8" class="list-group-item list-group-item-danger">List item 4</div>
+        </div>
+
+        <script type="text/javascript">
+            $("#li1").click(function(){
+                $("#li1").addClass("active");  
+            });
+            $("#li2").click(function(){
+                $("#li2").addClass("active");  
+            });
+            $("#li3").click(function(){
+                $("#li3").addClass("active");  
+            });
+            $("#li4").click(function(){
+                $("#li4").addClass("active");  
+            });
+        </script>
+    </body>
+</html>

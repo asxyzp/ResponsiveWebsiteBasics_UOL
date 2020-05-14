@@ -1,15 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Manipulating HTML element</title>
-    </head>
-    <body>
-        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <h1 id="changeText" onclick="$('#changeText').html('Goodbye');">
-            Hello
-        </h1>
-        <h1 class="changeAnotherText" onclick="$('.changeAnotherText').html('How are you?');">
-            Hi!
-        </h1>
+
+<head>
+	<title>Manipulating HTML element</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<style>
+		#dropDown {
+			background: #ccc;
+		}
+
+		.box-style {
+			border: 2px solid #000;
+			box-shadow: 2px 2px;
+			padding: 1%;
+			margin: 10px auto;
+			text-align: center;
+			background: white;
+		}
+
+		button[onclick="showHide();"] {
+			margin-left: 45%;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.5.0.js">
+
+	</script>
+	<script type="text/javascript">
+		var count=0;
+            function showHide()
+            {
+                if(count%2==0)
+                {
+                    $('#dropDown').hide();
+                    count++;
+                }
+                else if(count%2==1)
+                {
+                    $('#dropDown').show();
+                    count++;
+                }
+            }
+            $(document).ready(function()
+            {
+                showHide();
+            })
+	</script>
+</head>
+
+<body>
+	<!--Using id-->
+	<h1 id="changeText" onclick="$('#changeText').html('Goodbye');">Hello</h1>
+
+	<!--Using class-->
+	<h1 class="changeAnotherText" onclick="$('.changeAnotherText').html('How are you?');">Hi!</h1>
+
+	<!--Using this-->
+	<h1 onclick="$(this).hide();">Hide this text</h1>
+
+	<!--Using element name-->
+	<h2 onclick="$('h2').hide();">Also hide this text</h1>
+
+		<!--Using attribute-->
+		<h3 name="hello" onclick="$('[name]').hide();">Definitely hide this text</h3>
+
+		<!--Using *-->
+		<h3 onclick="$('*').hide();">Hide All text</h3>
+
+		<!--Button to show or hide elements-->
+		<button onclick="showHide();">=</button>
+        <div class="container-fluid" id="dropDown">
+            <div class="row">
+                <div class="col-md-3 box-style"><a href="#">Home</a></div>
+                <div class="col-md-3 box-style"><a href="#">About us</a></div>
+                <div class="col-md-3 box-style"><a href="#">Contact</a></div>
+            </div>
+        </div>
+
+        <!--Changing text using JQuery-->
+        <h1 id="hello">Hello again.</h1>
+        <script type="text/javascript">
+            $("#hello").html("Goodbye.");
+        </script>
+
+        <!--Changing text using JS function w/ JQuery-->
+        <h1 id="helloAgain" onclick="sayHello();">Hello again.</h1>
+        <script type="text/javascript">
+            function sayHello()
+            {
+                $("#helloAgain").html("Goodbye.");
+            }
+        </script>
+
+        <!--Alert using JS function-->
+        <h1 id="helloOnceAgain" onclick="sayHelloAgain();">Hello again.</h1>
+        <script type="text/javascript">
+            function sayHelloAgain()
+            {
+                alert("Goodbye");
+            }
+        </script>
+
+        <!--Using anonymous function-->
+        <h1 id="fuckYou" onclick="fYou();">Fuck you.</h1>
+        <script type="text/javascript">
+            function fYou()
+            {
+                $("#fuckYou").html("Go to hell.");
+                $("#fuckYou").click(function() {   //Anonymous function
+                    $("#fuckYou").html("Fuck you");
+                    $("#fuckYou").off("click");    //off() function turns off the functionality
+                })
+            }
+        </script>
+
+        <!--Button to show or hide elements-->
+        <button onclick="showOrHide();">=</button>
+        <div class="container-fluid" id="dDown">
+            <div class="row">
+                <div class="col-md-3 box-style"><a href="#">Home</a></div>
+                <div class="col-md-3 box-style"><a href="#">About us</a></div>
+                <div class="col-md-3 box-style"><a href="#">Contact</a></div>
+            </div>
+        </div>
+        <script>
+            function showOrHide()
+            {   
+                $("#dDown").toggle();
+            }
+            $(document).ready(function(){showOrHide();});
+        </script>
     </body>
 </html>

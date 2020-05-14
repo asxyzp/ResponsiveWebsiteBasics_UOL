@@ -1,0 +1,18 @@
+Sample text for tweetIO :
+Hello, world! My name is asxyzp. I love computer science & mathematics. I am currently learning web development from UOL's web design & development specialization on Coursera, along with FreeCodeCamp's responsive web design & JavaScript algorithms & data structures certification.
+
+Basic HTML page:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="icon" href=""/>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href=""/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src=""></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+    </body>
+</html>

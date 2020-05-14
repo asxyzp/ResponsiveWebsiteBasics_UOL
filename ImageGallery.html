@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Image Gallery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="ImgGalStyle.css" />
+	<script src="https://code.jquery.com/jquery-3.5.0.js">
+	</script>
+	<script src="ImgGal.js">
+	</script>
+</head>
+
+<body>
+	<!--Navigation bar-->
+	<div class="navigation-bar">
+		<a href="ImageGallery.html">Home</a>&nbsp;
+		<a href="#">About us</a>&nbsp;
+		<a href="#">Contacts</a>
+	</div>
+	<hr>
+
+	<!--Image gallery-->
+	<div class="container">
+		<h1>Image Gallery</h1>
+		<div class="row">
+			<div class="col-md-3">
+				<img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191228121747.jpg"
+                    alt="Mountain 1"/>
+                </div>
+                <div class="col-md-3">
+                    <img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191228121737.jpg"
+                    alt="Mountain 2"/>
+                </div>
+                <div class="col-md-3">
+                    <img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191214150926.jpg"
+                    alt="Mountain 3"/>
+                </div>
+                <div class="col-md-3">
+                    <img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/09/img20190930185614.jpg" 
+                    alt="Sunset 1"/>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="large-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191214150926.jpg">
+                </div>
+            </div>
+        </div>
+        <a onclick="changeLink()" href="#" id="changeLink">Clicking this will change the hyperlink reference of the link.</a>
+
+        <!--Changing the width of the image using JQuery-->
+        <p>Clicking on the image below would change it's width :</p>
+        <img id="alignImg" class="changeWidth" width="20%" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191214150926.jpg">
+        <script>
+            $(".changeWidth").click(function(){
+                $(".changeWidth").attr("width","50%");
+            });
+        </script>
+        <br><br>
+
+        <!--Changing CSS properties when cursor hovers over the image-->
+        <p>Hovering over the image below would change it's border-radius :</p>
+        <img class="cat-image"
+        src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"
+        alt="Smoll kitty"/>
+        <script type="text/javascript">
+            $(".cat-image").mouseenter(function(){
+                $(".cat-image").css("border-radius","50%");
+            });
+            $(".cat-image").mouseleave(function(){
+                $(".cat-image").css("border-radius","0%");
+            });
+        </script>
+        <br><br>
+
+        <!---->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+                <div class="col-md-1 colored-circle"></div>&nbsp;
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(".colored-circle").mouseenter(
+                function()
+                {
+                    $(".colored-circle").css("border-color","green");
+                    $(".colored-circle").css("background","green");
+                }
+            );
+            $(".colored-circle").mouseleave(
+                function()
+                {
+                    $(".colored-circle").css("border-color","blue");
+                    $(".colored-circle").css("background","blue");
+                }
+            );
+        </script>
+        <h1 id="title">Hello</h1>
+        <ul>
+            <li class="emphasised">1</li>
+            <li>2</li>
+            <li class="emphasised">3</li>
+        </ul>
+        <script>
+            alert($("#title").html());
+            $("li.emphasised").css("background","#ccc");
+        </script>
+    </body>
+</html>

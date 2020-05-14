@@ -1,0 +1,18 @@
+h1{text-align: center;}
+.small-img
+{
+    margin-bottom:10px;
+    margin-right:10px;
+    max-height:150px;
+    max-width:100%;
+}
+.large-img{max-width:100%;}
+.cat-image{width:20%;}
+.colored-circle
+{
+    border:5px solid rgb(0,0,0);
+    border-radius:50%;
+    height:1%;
+    width:1%;
+    padding:5%;
+}

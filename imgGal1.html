@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Image Gallery</title>
+	<link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<link href="imgGal1.css" type="text/css" rel="stylesheet" />
+	<script src="jquery-3.5.0.js">
+
+	</script>
+	<script src="imgGal1.js">
+
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+	<div class="navbar">
+		<a href="imgGal1.html" target="_blank">Home</a>&nbsp;|&nbsp;
+		<a href="#" target="_blank">About</a>&nbsp;|&nbsp;
+		<a href="#" target="_blank">Projects</a>&nbsp;|&nbsp;
+		<a href="#" target="_blank">Startup</a>&nbsp;|&nbsp;
+		<a href="#" target="_blank">Contact</a>
+	</div>
+	<div class="container-fluid small-img-div">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="https://i.imgur.com/ExL4UTM.jpg" class="small-img" id="small-img-1"/>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://i.imgur.com/UVJMVXM.jpg" class="small-img" id="small-img-2"/>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://i.imgur.com/TyzPb77.jpg" class="small-img" id="small-img-3"/>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://i.imgur.com/Zdyoa5B.jpg" class="small-img" id="small-img-4"/>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid large-img-div">
+            <button id="leftButton" class="col-md-1" type="button"> < </button>
+            <div class="row">
+                <div class="col-md-10">
+                    <img id="large-img" src="https://i.imgur.com/ExL4UTM.jpg"/>
+                </div>
+            </div>
+            <button id="rightButton" class="col-md-1" type="button"> > </button>
+        </div>
+    </body>
+</html>
