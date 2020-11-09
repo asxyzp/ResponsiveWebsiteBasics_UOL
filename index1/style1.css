@@ -1,4 +1,4 @@
-@media (min-width:320px)
+@media (min-width:300px)
 {
     body{
         background: blue;
@@ -9,6 +9,13 @@
 {
     body{
         background: red;
+        color:white;
+    }
+}
+@media (min-width:700px)
+{
+    body{
+        background: orange;
         color:white;
     }
 }

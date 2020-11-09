@@ -3,21 +3,19 @@
 
 <head>
 	<title>Image Gallery</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="ImgGalStyle.css" />
-	<script src="https://code.jquery.com/jquery-3.5.0.js">
-	</script>
-	<script src="ImgGal.js">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="ImgGal.js"></script>
 </head>
 
 <body>
 	<!--Navigation bar-->
-	<div class="navigation-bar">
+	<nav class="navigation-bar">
 		<a href="ImageGallery.html">Home</a>&nbsp;
 		<a href="#">About us</a>&nbsp;
 		<a href="#">Contacts</a>
-	</div>
+	</nav>
 	<hr>
 
 	<!--Image gallery-->
@@ -36,9 +34,11 @@
                     <img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/12/img20191214150926.jpg"
                     alt="Mountain 3"/>
                 </div>
-                <div class="col-md-3">
-                    <img class="small-img" src="https://aashishtakesbadphotos.files.wordpress.com/2019/09/img20190930185614.jpg" 
-                    alt="Sunset 1"/>
+				<div class="col-md-3">
+					<img class="small-img"
+					src="IMG20190617173201.jpg"
+					alt="Fergusson college"/>
+				</div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <a onclick="changeLink()" href="#" id="changeLink">Clicking this will change the hyperlink reference of the link.</a>
+        <a target='_self' onclick="changeLink()" href="#" id="changeLink">Clicking this will change the hyperlink reference of the link.</a>
 
         <!--Changing the width of the image using JQuery-->
         <p>Clicking on the image below would change it's width :</p>

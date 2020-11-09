@@ -5,14 +5,12 @@
 	<title>Manipulating HTML element</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
 	<style>
-		#dropDown {
-			background: #ccc;
+		.row{
+			display: flex;
+			flex-direction: row;
 		}
-
 		.box-style {
-			border: 2px solid #000;
-			box-shadow: 2px 2px;
-			padding: 1%;
+			padding:10px;
 			margin: 10px auto;
 			text-align: center;
 			background: white;
@@ -70,9 +68,9 @@
 		<button onclick="showHide();">=</button>
         <div class="container-fluid" id="dropDown">
             <div class="row">
-                <div class="col-md-3 box-style"><a href="#">Home</a></div>
-                <div class="col-md-3 box-style"><a href="#">About us</a></div>
-                <div class="col-md-3 box-style"><a href="#">Contact</a></div>
+                <div class="col-md-2 box-style"><a href="#">Home</a></div>
+                <div class="col-md-2 box-style"><a href="#">About us</a></div>
+                <div class="col-md-2 box-style"><a href="#">Contact</a></div>
             </div>
         </div>
 

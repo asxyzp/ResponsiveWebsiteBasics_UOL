@@ -1,8 +1,3 @@
-//Replaces image w/ class "large-img" when clicking upon the image with class "small-img"
-$(".small-img").click(function () {
-    $(".large-img").attr('src', $(this).attr('src'));
-});
-
 //Changing the href attribute value of the link
 function changeLink() {
     $("#changeLink").click(function () {
@@ -13,5 +8,10 @@ function changeLink() {
 
 $(document).ready(function () {
     changeLink();
+	//Replaces image w/ class "large-img" when clicking upon the image with class "small-img"
+	$(".small-img").click(function () {
+		console.log($(this).attr('src'));
+	    $(".large-img").attr('src', $(this).attr('src'));
+	});
 })
 
